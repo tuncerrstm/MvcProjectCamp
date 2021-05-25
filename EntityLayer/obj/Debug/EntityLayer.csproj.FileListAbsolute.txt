@@ -1,0 +1,12 @@
+D:\Code\mvcCamp\MvcProjectCamp\EntityLayer\bin\Debug\EntityLayer.dll.config
+D:\Code\mvcCamp\MvcProjectCamp\EntityLayer\bin\Debug\EntityLayer.dll
+D:\Code\mvcCamp\MvcProjectCamp\EntityLayer\bin\Debug\EntityLayer.pdb
+D:\Code\mvcCamp\MvcProjectCamp\EntityLayer\bin\Debug\EntityFramework.dll
+D:\Code\mvcCamp\MvcProjectCamp\EntityLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\Code\mvcCamp\MvcProjectCamp\EntityLayer\bin\Debug\EntityFramework.xml
+D:\Code\mvcCamp\MvcProjectCamp\EntityLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\Code\mvcCamp\MvcProjectCamp\EntityLayer\obj\Debug\EntityLayer.csprojAssemblyReference.cache
+D:\Code\mvcCamp\MvcProjectCamp\EntityLayer\obj\Debug\EntityLayer.csproj.CoreCompileInputs.cache
+D:\Code\mvcCamp\MvcProjectCamp\EntityLayer\obj\Debug\EntityLayer.csproj.CopyComplete
+D:\Code\mvcCamp\MvcProjectCamp\EntityLayer\obj\Debug\EntityLayer.dll
+D:\Code\mvcCamp\MvcProjectCamp\EntityLayer\obj\Debug\EntityLayer.pdb

@@ -1,0 +1,17 @@
+D:\Code\mvcCamp\MvcProjectCamp\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
+D:\Code\mvcCamp\MvcProjectCamp\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\Code\mvcCamp\MvcProjectCamp\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\Code\mvcCamp\MvcProjectCamp\DataAccessLayer\bin\Debug\EntityFramework.dll
+D:\Code\mvcCamp\MvcProjectCamp\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\Code\mvcCamp\MvcProjectCamp\DataAccessLayer\bin\Debug\EntityLayer.dll
+D:\Code\mvcCamp\MvcProjectCamp\DataAccessLayer\bin\Debug\EntityLayer.pdb
+D:\Code\mvcCamp\MvcProjectCamp\DataAccessLayer\bin\Debug\EntityLayer.dll.config
+D:\Code\mvcCamp\MvcProjectCamp\DataAccessLayer\bin\Debug\EntityFramework.xml
+D:\Code\mvcCamp\MvcProjectCamp\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\Code\mvcCamp\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.csprojAssemblyReference.cache
+D:\Code\mvcCamp\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+D:\Code\mvcCamp\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
+D:\Code\mvcCamp\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+D:\Code\mvcCamp\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+D:\Code\mvcCamp\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig1.resources
+D:\Code\mvcCamp\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.GenerateResource.cache
