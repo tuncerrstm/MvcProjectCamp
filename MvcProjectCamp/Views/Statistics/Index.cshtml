@@ -1,0 +1,75 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+
+<h2>Statistics Page</h2>
+<table>
+
+    <tr>
+        <td>
+            <div class="card text-white  bg-gradient-dark" style="max-width:20rem;">
+                <div class="card-header">Statistics - 1</div>
+                <div class="card-body">
+                    <h1 class="card-title">Toplam Kategori Sayısı</h1>
+                    <br />
+                    <br />
+                    <h5 class="card-text">@ViewBag.getcategory</h5>
+                </div>
+            </div>
+        </td>
+
+        <td>
+            <div class="card text-white  badge-danger" style="max-width:20rem;">
+                <div class="card-header">Statistics - 2</div>
+                <div class="card-body">
+                    <h1 class="card-title">Yazılım Konu Sayısı</h1>
+                    <br />
+                    <br />
+                    <h5 class="card-text">@ViewBag.software</h5>
+                </div>
+            </div>
+        </td>
+
+        <td>
+            <div class="card text-white  bg-primary" style="max-width:20rem;">
+                <div class="card-header">Statistics - 3</div>
+                <div class="card-body">
+                    <h1 class="card-title">Durumu "true" ile "false" Olan Kategoriler Arasındaki Sayısal Fark</h1>
+                    <br />
+                    <br />
+                    <h5 class="card-text">@ViewBag.status</h5>
+                </div>
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <div class="card text-white  bg-green" style="max-width:20rem;">
+                <div class="card-header">Statistics - 4</div>
+                <div class="card-body">
+                    <h1 class="card-title">Adında A Harfi Geçen Yazar Sayısı</h1>
+                    <br />
+                    <br />
+                    <h5 class="card-text">@ViewBag.writer</h5>
+                </div>
+            </div>
+        </td>
+
+        <td>
+            <div class="card text-white  bg-gradient-warning" style="max-width:20rem;">
+                <div class="card-header">Statistics - 5</div>
+                <div class="card-body">
+                    <h1 class="card-title">En Fazla Başlığa Sahip Kategori Adı</h1>
+                    <br />
+                    <br />
+                    <h5 class="card-text">@ViewBag.title</h5>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>

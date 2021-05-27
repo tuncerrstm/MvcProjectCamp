@@ -3,20 +3,48 @@
     Layout = null;
 }
 
-<h3>MVC Camp Table Simple</h3>
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<h3>MVC Camp Table Simple - Category</h3>
 <br />
-<table>
+<table class="table table-bordered">
     <tr>
         <th>ID</th>
         <th>Name</th>
         <th>Explanation</th>
         <th>Status</th>
+        <th>Update</th>
     </tr>
     <tr>
         <td>1</td>
-        <td>Eğitim</td>
-        <td>Açıklama Yapıldı</td>
+        <td>Education</td>
+        <td>Content description</td>
         <td>True</td>
+        <td><button class="btn btn-success">Update</button></td>
     </tr>
-    
+    <tr>
+        <td>2</td>
+        <td>Sport</td>
+        <td>Content description</td>
+        <td>True</td>
+        <td><button class="btn btn-success">Update</button></td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Book</td>
+        <td>Content description</td>
+        <td>True</td>
+        <td><button class="btn btn-success">Update</button></td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Movie</td>
+        <td>Content description</td>
+        <td>True</td>
+        <td><button class="btn btn-success">Update</button></td>
+    </tr>
+
 </table>
+<button class="btn btn-info">New Category</button>
+<button class="btn btn-warning">Category List</button>
+<button class="btn btn-danger">Category Explanation</button>
