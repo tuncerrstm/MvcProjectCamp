@@ -1,0 +1,30 @@
+﻿@model EntityLayer.Concrete.Title
+
+@{
+    ViewBag.Title = "EditTitle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Edit Title Page</h2>
+@using (Html.BeginForm("EditTitle", "Title", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.Label("Title ID")
+        @Html.TextBoxFor(x => x.TitleID, new { @class = "form-control" })
+        <br />
+        @Html.Label("Title Name")
+        @Html.TextBoxFor(x => x.TitleName, new { @class = "form-control" })
+        <br />
+        @Html.Label("Date")
+        @Html.TextBoxFor(x => x.TitleDate, new { @class = "form-control" })
+        <br />
+        @Html.Label("Writer ID")
+        @Html.TextBoxFor(x => x.WriterID, new { @class = "form-control" })
+        <br />
+        @Html.Label("Category")
+        @Html.DropDownListFor(x => x.CategoryID, (List<SelectListItem>)ViewBag.vlc, new { @class = "form-control" })
+        <br />
+        <button class="btn btn-success">Update</button>
+    </div>
+}
+

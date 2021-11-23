@@ -1,0 +1,167 @@
+﻿@using EntityLayer.Concrete
+@model List<Title>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@{  string color = " ";} 
+
+<!DOCTYPE html>
+<html>
+
+<body class="hold-transition sidebar-mini">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Titles</h1>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- Main content -->
+    <section class="content">
+        <!-- Default box -->
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Title Operations</h3>
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    @*<button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Remove">
+                        <i class="fas fa-times"></i>
+                    </button>*@
+                </div>
+            </div>
+            <div class="card-body p-0">
+                <table class="table table-striped projects">
+                    <thead>
+                        <tr>
+                            <th style="width: 1%">
+                                #
+                            </th>
+                            <th style="width: 20%">
+                                Title Name
+                            </th>
+                            <th style="width: 15%">
+                                Created Writer
+                            </th>
+                            <th style="width: 10%">
+                                Status
+                            </th>
+                            <th style="width: 8%" class="text-center">
+                                Category
+                            </th>
+                            <th style="width: 20%">
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            if(item.Category.CategoryName == "Theater")
+                            {
+                                color = "badge badge-warning";
+                            }
+                            if (item.Category.CategoryName == "Sports")
+                            {
+                                color = "badge badge-success";
+                            }
+                            if (item.Category.CategoryName == "Series")
+                            {
+                                color = "badge badge-info";
+                            }
+                            if (item.Category.CategoryName == "Travel")
+                            {
+                                color = "badge badge-danger";
+                            }
+                            if (item.Category.CategoryName == "Movie")
+                            {
+                                color = "badge badge-primary";
+                            }
+                            if (item.Category.CategoryName == "Book")
+                            {
+                                color = "badge badge-secondary";
+                            }
+
+                            <tr>
+                                <td>
+                                    @item.TitleID
+                                </td>
+                                <td>
+                                    <a>
+                                        @item.TitleName
+                                    </a>
+                                    <br />
+                                    <small>
+                                        Date: @(((DateTime)item.TitleDate).ToString("dd-MMM-yyyy"))
+                                    </small>
+                                </td>
+                                <td>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <img alt="Avatar" class="table-avatar" src="@item.Writer.WriterImage">
+                                        </li>
+                                    </ul>
+                                </td>   
+                                <td>
+                                    @item.TitleStatus
+                                </td>
+                                <td class="project-state">
+                                    <span class="@color" >@item.Category.CategoryName</span>
+                                </td>
+                                <td class="project-actions text-right">
+                                    <a class="btn btn-primary btn-sm" href="/Content/ContentByTitle/@item.TitleID">
+                                        <i class="fas fa-folder">
+                                        </i>
+                                        View Titles
+                                    </a>
+                                    <a class="btn btn-info btn-sm" href="/Title/EditTitle/@item.TitleID">
+                                        <i class="fas fa-pencil-alt">
+                                        </i>
+                                        Edit
+                                    </a>
+                                    <a class="btn btn-danger btn-sm" href="/Title/DeleteTitle/@item.TitleID">
+                                        <i class="fas fa-trash">
+                                        </i>
+                                        Delete
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+    </section>
+</body>
+</html>
+<a href="/Title/AddTitle/" class="btn btn-primary">New Title Added</a>
+
+
+@*<h2>Index</h2>
+    <br />
+    <table class="table table-bordered">
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Category</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.TitleID</td>
+            <td>@item.TitleName</td>
+            <td>@item.Category.CategoryName</td>
+        </tr>
+        }
+    </table>
+    <br />
+    <a href="/Title/AddTitle/" class="btn btn-outline-info">New Title</a>*@
+
