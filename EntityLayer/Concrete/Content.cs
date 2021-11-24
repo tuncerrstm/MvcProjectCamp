@@ -17,6 +17,8 @@ namespace EntityLayer.Concrete
 
         public DateTime ContentDate { get; set; }
 
+        public bool ContentStatus { get; set; }
+
         public int TitleID { get; set; }
         public virtual Title Title { get; set; }
 

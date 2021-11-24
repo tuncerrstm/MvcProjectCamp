@@ -15,3 +15,13 @@ D:\Code\mvcCamp\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 D:\Code\mvcCamp\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
 D:\Code\mvcCamp\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig1.resources
 D:\Code\mvcCamp\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.GenerateResource.cache
+D:\Code\mvcCamp\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_writer_edit.resources
+D:\Code\mvcCamp\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_writer_title_add.resources
+D:\Code\mvcCamp\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_imagesizeChange_writer.resources
+D:\Code\mvcCamp\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_writer_addStatus.resources
+D:\Code\mvcCamp\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_contentstatusAdd.resources
+D:\Code\mvcCamp\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.titlestatusAdd.resources
+D:\Code\mvcCamp\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_add_message_class.resources
+D:\Code\mvcCamp\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_contactadd_date.resources
+D:\Code\mvcCamp\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_add_image_Files.resources
+D:\Code\mvcCamp\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_admin_table.resources
