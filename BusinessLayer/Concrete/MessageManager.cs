@@ -30,7 +30,7 @@ namespace BusinessLayer.Concrete
 
         public List<Message> GetListSendbox()
         {
-            return _messageDal.List(x => x.SenderMail == "admin@gmail.com");
+            return _messageDal.List(x => x.SenderMail == "aliyildiz@gmail.com");
         }
 
         public void MessageAdd(Message message)

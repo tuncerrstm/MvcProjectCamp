@@ -1,0 +1,27 @@
+﻿@model EntityLayer.Concrete.Title
+
+@{
+    ViewBag.Title = "EditTitle";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
+}
+
+
+<h2>Edit Title Page</h2>
+@using (Html.BeginForm("EditTitle", "WriterPanel", FormMethod.Post))
+{
+<div class="form-group">
+    <br />
+    @Html.Label("Title")
+    @Html.TextBoxFor(x => x.TitleID, new { @class = "form-control disabled", @style="width:10rem", @readonly = true })
+    <br />
+    @Html.HiddenFor(x => x.TitleDate)
+    @Html.HiddenFor(x => x.WriterID)
+    @Html.Label("Title Name")
+    @Html.TextBoxFor(x => x.TitleName, new { @class = "form-control" })
+    <br />
+    @Html.Label("Category")
+    @Html.DropDownListFor(x => x.CategoryID, (List<SelectListItem>)ViewBag.vlc, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Update</button>
+</div>
+}

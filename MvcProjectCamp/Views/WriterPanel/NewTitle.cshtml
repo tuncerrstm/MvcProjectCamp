@@ -1,0 +1,23 @@
+﻿@model EntityLayer.Concrete.Title
+
+@{
+    ViewBag.Title = "NewTitle";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
+}
+
+<h3>New Title Added</h3>
+<br />
+@using (Html.BeginForm("NewTitle", "WriterPanel", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.Label("Title Name")
+        @Html.TextBoxFor(x => x.TitleName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.TitleName)
+        <br />
+        @Html.Label("Category")
+        @Html.DropDownListFor(x => x.CategoryID, (List<SelectListItem>)ViewBag.vlc, new { @class = "form-control" })
+        @*@Html.ValidationMessageFor(x => x.CategoryID)*@
+        <br />
+        <button class="btn btn-info">Add Title</button>
+    </div>
+}

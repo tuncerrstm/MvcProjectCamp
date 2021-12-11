@@ -10,6 +10,7 @@ namespace BusinessLayer.Abstract
     public interface ITitleService
     {
         List<Title> GetList();
+        List<Title> GetListByWriter();
         void TitleAdd(Title title);
         Title GetByID(int id);
         void TitleDelete(Title title);

@@ -2,11 +2,12 @@
 @model List<Title>
 
 @{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewBag.Title = "MyTitle";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
 }
 
-@{  string color = " ";} 
+
+@{ string color = " ";}
 
 <!DOCTYPE html>
 <html>
@@ -33,8 +34,8 @@
                         <i class="fas fa-minus"></i>
                     </button>
                     @*<button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Remove">
-                        <i class="fas fa-times"></i>
-                    </button>*@
+                            <i class="fas fa-times"></i>
+                        </button>*@
                 </div>
             </div>
             <div class="card-body p-0">
@@ -50,9 +51,6 @@
                             <th style="width: 15%">
                                 Created Writer
                             </th>
-                            <th style="width: 10%">
-                                Status
-                            </th>
                             <th style="width: 8%" class="text-center">
                                 Category
                             </th>
@@ -63,7 +61,7 @@
                     <tbody>
                         @foreach (var item in Model)
                         {
-                            if(item.Category.CategoryName == "Theater")
+                            if (item.Category.CategoryName == "Theater")
                             {
                                 color = "badge badge-warning";
                             }
@@ -107,12 +105,9 @@
                                             <img alt="Avatar" class="table-avatar" src="@item.Writer.WriterImage">
                                         </li>
                                     </ul>
-                                </td>   
-                                <td>
-                                    @item.TitleStatus
                                 </td>
                                 <td class="project-state">
-                                    <span class="@color" >@item.Category.CategoryName</span>
+                                    <span class="@color">@item.Category.CategoryName</span>
                                 </td>
                                 <td class="project-actions text-right">
                                     <a class="btn btn-primary btn-sm" href="/Content/ContentByTitle/@item.TitleID">
@@ -120,12 +115,12 @@
                                         </i>
                                         View Titles
                                     </a>
-                                    <a class="btn btn-info btn-sm" href="/Title/EditTitle/@item.TitleID">
+                                    <a class="btn btn-info btn-sm" href="/WriterPanel/EditTitle/@item.TitleID">
                                         <i class="fas fa-pencil-alt">
                                         </i>
                                         Edit
                                     </a>
-                                    <a class="btn btn-danger btn-sm" href="/Title/DeleteTitle/@item.TitleID">
+                                    <a class="btn btn-danger btn-sm" href="/WriterPanel/DeleteTitle/@item.TitleID">
                                         <i class="fas fa-trash">
                                         </i>
                                         Delete
@@ -142,6 +137,8 @@
     </section>
 </body>
 </html>
-<a href="/Title/AddTitle/" class="btn btn-primary">New Title Added</a>
+<a href="/WriterPanel/NewTitle/" class="btn btn-primary">New Title Added</a>
+
+
 
 
