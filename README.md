@@ -1,4 +1,12 @@
-# [|MvcProjectCamp|]
+# MvcProject
+## Tools & Infrastructures & Technologies Used
+
+- Migrations
+- Layered Architecture
+- Entity Framework
+- MVC Pattern
+
+Our project was created using the code first methodology.
 
 <img src="https://media.giphy.com/media/3oz8xTNxIYYo7sblK0/giphy.gif" align ="right" >
 
@@ -44,7 +52,7 @@
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=tuncerrstm&layout=compact" >
 </details>
 
-<img src="https://media.giphy.com/media/9rtpurjbqiqZXbBBet/giphy.gif" align ="left" >
+<img src="https://media.giphy.com/media/v2xIous7mnEYg/giphy.gif" align ="left" >
 
 [twitter]: https://twitter.com/tuncerRstm
 [linkedin]: https://www.linkedin.com/in/tuncer-r%C3%BCstemo%C4%9Flu-74917b187/
