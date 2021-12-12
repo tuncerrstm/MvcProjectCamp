@@ -1,4 +1,4 @@
-## MvcProjectCamp
+# [|MvcProjectCamp|]
 
 <img src="https://media.giphy.com/media/3oz8xTNxIYYo7sblK0/giphy.gif" align ="right" >
 
@@ -43,9 +43,8 @@
 <summary>:bulb: Most Used Languages</summary>
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=tuncerrstm&layout=compact" >
 </details>
-<summary>:bulb: Most Used Languages</summary>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=enescerrahoglu&langs_count=8" >
-</details>
+
+<img src="https://media.giphy.com/media/9rtpurjbqiqZXbBBet/giphy.gif" align ="left" >
 
 [twitter]: https://twitter.com/tuncerRstm
 [linkedin]: https://www.linkedin.com/in/tuncer-r%C3%BCstemo%C4%9Flu-74917b187/
