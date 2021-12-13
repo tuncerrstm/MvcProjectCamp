@@ -28,9 +28,9 @@ namespace BusinessLayer.Concrete
             return _titleDal.List();
         }
 
-        public List<Title> GetListByWriter()
+        public List<Title> GetListByWriter(int id)
         {
-            return _titleDal.List(x => x.WriterID == 4);
+            return _titleDal.List(x => x.WriterID == id);
         }
 
         public void TitleAdd(Title title)

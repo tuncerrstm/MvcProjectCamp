@@ -26,7 +26,7 @@
     <!-- Main content -->
     <section class="content">
         <div class="row">
-            @Html.Action("MessageListMenu", "Contact")
+            @Html.Action("MessageListMenu", "WriterPanelMessage")
             <!-- /.col -->
             <div class="col-md-9">
                 <div class="card card-primary card-outline">
@@ -80,8 +80,8 @@
                                                     <label for="check1"></label>
                                                 </div>
                                             </td>
-                                            <td class="mailbox-star"><a href="/Message/GetInboxMessageDetails/@item.MessageID"><i class="fas fa-star text-warning"></i></a></td>
-                                            <td class="mailbox-name"><a href="/Message/GetInboxMessageDetails/@item.MessageID">@item.SenderMail</a></td>
+                                            <td class="mailbox-star"><a href="/WriterPanelMessage/GetInboxMessageDetails/@item.MessageID"><i class="fas fa-star text-warning"></i></a></td>
+                                            <td class="mailbox-name"><a href="/WriterPanelMessage/GetInboxMessageDetails/@item.MessageID">@item.SenderMail</a></td>
                                             <td class="mailbox-subject">
                                                 <b>@item.Subject</b> - @item.MessageContent.Substring(0, 30)...
                                             </td>

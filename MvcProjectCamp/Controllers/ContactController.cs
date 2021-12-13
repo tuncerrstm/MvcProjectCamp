@@ -14,6 +14,7 @@ namespace MvcProjectCamp.Controllers
         ContactManager cm = new ContactManager(new EfContactDal());
         ContactValidator cv = new ContactValidator();
         
+        
         public ActionResult Index()
         {
             var contactValues = cm.GetList();

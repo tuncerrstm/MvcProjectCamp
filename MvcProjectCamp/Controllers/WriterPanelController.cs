@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Concrete;
+using DataAccessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using System;
@@ -19,9 +20,13 @@ namespace MvcProjectCamp.Controllers
             return View();
         }
 
-        public ActionResult MyTitle()
+        public ActionResult MyTitle(string p)
         {
-            var values = tm.GetListByWriter();
+            Context c = new Context();
+            p = (string)Session["WriterMail"];
+            var writerIDinfo = c.Writers.Where(x => x.WriterMail == p).Select(y => y.WriterID).FirstOrDefault();
+            ViewBag.d = writerIDinfo;
+            var values = tm.GetListByWriter(writerIDinfo);
             return View(values);
         }
 
@@ -43,7 +48,7 @@ namespace MvcProjectCamp.Controllers
         public ActionResult NewTitle(Title p)
         {
             p.TitleDate = DateTime.Parse(DateTime.Now.ToLongDateString());
-            p.WriterID = 4;
+            p.WriterID = writerIDinfo;
             p.TitleStatus = true;
             tm.TitleAdd(p);
             return RedirectToAction("MyTitle");
