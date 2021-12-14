@@ -29,10 +29,11 @@
                         @using (Html.BeginForm("WriterLogin", "Login", FormMethod.Post))
                         {
                             <div class="form-group">
-                                <input type="text" name="WriterMail" class="form-control" placeholder="Username" required>
+                                <input type="text" name="WriterMail" class="form-control" placeholder="Mail Address" required>
                             </div>
                             <div class="form-group">
                                 <input id="password-field" name="WriterPassword" type="password" class="form-control" placeholder="Password" required>
+                                <h6>@ViewData["Error"]</h6>
                                 <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                             </div>
                             <div class="g-recaptcha" data-sitekey="6LfQczwbAAAAADP-yk6RizRtAawpfdSm0BKpZz6f"></div>

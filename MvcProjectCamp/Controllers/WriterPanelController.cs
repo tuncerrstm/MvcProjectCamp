@@ -15,6 +15,8 @@ namespace MvcProjectCamp.Controllers
         TitleManager tm = new TitleManager(new EfTitleDal());
         CategoryManager cm = new CategoryManager(new EfCategoryDal());
 
+        Context c = new Context();
+
         public ActionResult WriterProfile()
         {
             return View();
@@ -22,10 +24,9 @@ namespace MvcProjectCamp.Controllers
 
         public ActionResult MyTitle(string p)
         {
-            Context c = new Context();
+            
             p = (string)Session["WriterMail"];
             var writerIDinfo = c.Writers.Where(x => x.WriterMail == p).Select(y => y.WriterID).FirstOrDefault();
-            ViewBag.d = writerIDinfo;
             var values = tm.GetListByWriter(writerIDinfo);
             return View(values);
         }
@@ -34,6 +35,7 @@ namespace MvcProjectCamp.Controllers
         [HttpGet]
         public ActionResult NewTitle()
         {
+            
             List<SelectListItem> valueCategory = (from x in cm.GetList()
                                                   select new SelectListItem
                                                   {
@@ -47,6 +49,8 @@ namespace MvcProjectCamp.Controllers
         [HttpPost]
         public ActionResult NewTitle(Title p)
         {
+            string emailValue = (string)Session["WriterMail"];
+            var writerIDinfo = c.Writers.Where(x => x.WriterMail == emailValue).Select(y => y.WriterID).FirstOrDefault();
             p.TitleDate = DateTime.Parse(DateTime.Now.ToLongDateString());
             p.WriterID = writerIDinfo;
             p.TitleStatus = true;
