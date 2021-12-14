@@ -70,5 +70,13 @@ namespace MvcProjectCamp.Controllers
 
             return View();
         }
+
+        public ActionResult Draft()
+        {
+            string userEmail = (string)Session["WriterMail"];
+            var sendList = mm.GetListSendbox();
+            var draftList = sendList.FindAll(x => x.isDraft == true);
+            return View(draftList);
+        }
     }
 }
