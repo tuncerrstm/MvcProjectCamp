@@ -9,6 +9,8 @@ using System.Web;
 using System.Web.Mvc;
 using PagedList;
 using PagedList.Mvc;
+using FluentValidation.Results;
+using BusinessLayer.ValidationRules;
 
 namespace MvcProjectCamp.Controllers
 {
@@ -16,11 +18,36 @@ namespace MvcProjectCamp.Controllers
     {
         TitleManager tm = new TitleManager(new EfTitleDal());
         CategoryManager cm = new CategoryManager(new EfCategoryDal());
-
+        WriterManager wm = new WriterManager(new EfWriterDal());
         Context c = new Context();
 
-        public ActionResult WriterProfile()
+        [HttpGet]
+        public ActionResult WriterProfile(int id=0)
         {
+            string p = (string)Session["WriterMail"];
+            id = c.Writers.Where(x => x.WriterMail == p).Select(y => y.WriterID).FirstOrDefault();
+            var writerValue = wm.GetByID(id);
+            return View(writerValue);
+        }
+
+        [HttpPost]
+        public ActionResult WriterProfile(Writer p)
+        {
+            WriterValidator writerValidator = new WriterValidator();
+            ValidationResult results = writerValidator.Validate(p);
+            if (results.IsValid)
+            {
+                wm.WriterUpdate(p);
+                return RedirectToAction("AllTitles", "WriterPanel");
+            }
+            else
+            {
+                foreach (var item in results.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
+
             return View();
         }
 
