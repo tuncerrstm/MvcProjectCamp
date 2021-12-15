@@ -40,7 +40,7 @@ to get the desired effect
             <a href="/WriterPanel/MyTitle/" class="brand-link">
                 <img src="~/AdminLTE-3.0.4/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
                      style="opacity: .8">
-                <span class="brand-text font-weight-light">MVC Writer Panel</span>
+                <span class="brand-text font-weight-light">MVC My Project</span>
             </a>
             <!-- Sidebar -->
             <div class="sidebar">
@@ -50,31 +50,38 @@ to get the desired effect
                         <img src="~/AdminLTE-3.0.4/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block">Control Panel</a>
+                        <a href="#" class="d-block">Writer Panel</a>
                     </div>
                 </div>
                 <!-- Sidebar Menu -->
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
-                             with font-awesome or any other icon font library -->
-                            <li class="nav-item has-treeview">
-                                <a href="/AdminCategory/Index/" class="nav-link">
-                                    <i class="nav-icon fas fa-tachometer-alt"></i>
-                                    <p>
-                                        My Profile
-                                    </p>
-                                </a>
-                            </li>
+         with font-awesome or any other icon font library -->
+                        <li class="nav-item has-treeview">
+                            <a href="/AdminCategory/Index/" class="nav-link">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    My Profile
+                                </p>
+                            </a>
+                        </li>
                         <li class="nav-item">
                             <a href="/WriterPanel/MyTitle/" class="nav-link">
                                 <i class="nav-icon fas fa-th"></i>
                                 <p>
-                                    Titles
-                                    @*<span class="right badge badge-danger">New</span>*@
+                                    My Titles           
                                 </p>
                             </a>
-                        </li>   
+                        </li>
+                        <li class="nav-item">
+                            <a href="/WriterPanel/AllTitles/" class="nav-link">
+                                <i class="nav-icon fas fa-list-alt"></i>
+                                <p>
+                                    All Titles
+                                </p>
+                            </a>
+                        </li>
                         <li class="nav-item has-treeview">
                             <a href="~/WriterPanelMessage/Sendbox/" class="nav-link">
                                 <i class="nav-icon fas fa-edit"></i>
@@ -92,7 +99,7 @@ to get the desired effect
                             </a>
                         </li>
                         <li class="nav-item has-treeview">
-                            <a href="#" class="nav-link">
+                            <a href="/Default/Titles/" class="nav-link">
                                 <i class="nav-icon fas fa-book"></i>
                                 <p>
                                     Go to Website
@@ -101,7 +108,7 @@ to get the desired effect
 
                         </li>
                         <li class="nav-item has-treeview">
-                            <a href="#" class="nav-link">
+                            <a href="/Login/LogOut/" class="nav-link">
                                 <i class="nav-icon fas fa-door-closed"></i>
                                 <p>
                                     Log Out!

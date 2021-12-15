@@ -185,3 +185,7 @@ D:\Code\mvcCamp\MvcProjectCamp\MvcProjectCamp\bin\System.Xml.XPath.dll
 D:\Code\mvcCamp\MvcProjectCamp\MvcProjectCamp\bin\System.Xml.XPath.XDocument.dll
 D:\Code\mvcCamp\MvcProjectCamp\MvcProjectCamp\bin\FluentValidation.dll
 D:\Code\mvcCamp\MvcProjectCamp\MvcProjectCamp\bin\FluentValidation.xml
+D:\Code\mvcCamp\MvcProjectCamp\MvcProjectCamp\bin\PagedList.dll
+D:\Code\mvcCamp\MvcProjectCamp\MvcProjectCamp\bin\PagedList.Mvc.dll
+D:\Code\mvcCamp\MvcProjectCamp\MvcProjectCamp\bin\PagedList.xml
+D:\Code\mvcCamp\MvcProjectCamp\MvcProjectCamp\bin\PagedList.Mvc.xml

@@ -8,11 +8,13 @@ using System.Web.Mvc;
 
 namespace MvcProjectCamp.Controllers
 {
+    [AllowAnonymous]
     public class DefaultController : Controller
     {
         // GET: Default
 
         TitleManager tm = new TitleManager(new EfTitleDal());
+        ContentManager cm = new ContentManager(new EfContentDal());
 
         public ActionResult Titles()
         {
@@ -20,9 +22,10 @@ namespace MvcProjectCamp.Controllers
             return View(titleList);
         }
 
-        public ActionResult Index()
+        public PartialViewResult Index(int id = 0)
         {
-            return View();
+            var contentList = cm.GetListByTitleID(id);
+            return PartialView(contentList);
         }
     }
 }

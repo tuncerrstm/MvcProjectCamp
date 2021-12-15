@@ -7,6 +7,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PagedList;
+using PagedList.Mvc;
 
 namespace MvcProjectCamp.Controllers
 {
@@ -86,6 +88,12 @@ namespace MvcProjectCamp.Controllers
             TitleValue.TitleStatus = false;
             tm.TitleDelete(TitleValue);
             return RedirectToAction("MyTitle");
+        }
+
+        public ActionResult AllTitles(int page = 1)
+        {
+            var titles = tm.GetList().ToPagedList(page, 5);
+            return View(titles);
         }
     }
 }
