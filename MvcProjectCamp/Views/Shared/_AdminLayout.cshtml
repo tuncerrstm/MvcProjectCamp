@@ -57,24 +57,32 @@ to get the desired effect
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
-                             with font-awesome or any other icon font library -->
-                        @if(User.IsInRole("B"))
+         with font-awesome or any other icon font library -->
+                        @if (User.IsInRole("B"))
                         {
-                        <li class="nav-item has-treeview">
-                            <a href="/AdminCategory/Index/" class="nav-link">
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>
-                                    Categories   
-                                </p>
-                            </a>     
-                        </li>
+                            <li class="nav-item has-treeview">
+                                <a href="/AdminCategory/Index/" class="nav-link">
+                                    <i class="nav-icon fas fa-tachometer-alt"></i>
+                                    <p>
+                                        Categories
+                                    </p>
+                                </a>
+                            </li>
                         }
                         <li class="nav-item">
                             <a href="/Title/Index/" class="nav-link">
                                 <i class="nav-icon fas fa-th"></i>
                                 <p>
                                     Titles
-                                    @*<span class="right badge badge-danger">New</span>*@
+                                    @*<span class="right badge badge-danger">New</span>*@            
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/Content/GetAllContent/" class="nav-link">
+                                <i class="nav-icon fas fa-book-reader"></i>
+                                <p>
+                                    Articles
                                 </p>
                             </a>
                         </li>
@@ -84,7 +92,7 @@ to get the desired effect
                                 <p>
                                     Writers
                                 </p>
-                            </a>                    
+                            </a>
                         </li>
                         <li class="nav-item has-treeview">
                             <a href="#" class="nav-link">
@@ -119,7 +127,7 @@ to get the desired effect
                             <a href="/About/Index/" class="nav-link">
                                 <i class="nav-icon fas fa-tree"></i>
                                 <p>
-                                    About                       
+                                    About
                                 </p>
                             </a>
                         </li>
@@ -152,10 +160,10 @@ to get the desired effect
                             <a href="/ErrorPage/Page404/" class="nav-link">
                                 <i class="nav-icon far fa-envelope"></i>
                                 <p>
-                                    Error Pages         
+                                    Error Pages
                                 </p>
                             </a>
-                            
+
                         </li>
                         <li class="nav-item has-treeview">
                             <a href="/Home/HomePage/" class="nav-link">
@@ -164,16 +172,16 @@ to get the desired effect
                                     Go to Website
                                 </p>
                             </a>
-                            
+
                         </li>
                         <li class="nav-item has-treeview">
                             <a href="" class="nav-link">
                                 <i class="nav-icon fas fa-door-closed"></i>
                                 <p>
-                                    Log Out!   
+                                    Log Out!
                                 </p>
                             </a>
-                            
+
                         </li>
                     </ul>
                 </nav>
