@@ -1,0 +1,54 @@
+﻿@model EntityLayer.Concrete.MyAbout
+
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Update Skills</h2>
+@using (Html.BeginForm("Update", "MyAbout", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.Label("Writer ID")
+        @Html.TextBoxFor(x => x.SkillId, new { @class = "form-control" })
+        <br />
+        @Html.Label("Name")
+        @Html.TextBoxFor(x => x.FirstName, new { @class = "form-control" })
+        <br />
+        @Html.Label("Surname")
+        @Html.TextBoxFor(x => x.LastName, new { @class = "form-control" })
+        <br />
+        @Html.Label("About")
+        @Html.TextBoxFor(x => x.AboutShort, new { @class = "form-control" })
+        <br />
+        @Html.Label("Image Path")
+        @Html.TextBoxFor(x => x.ImagePath, new { @class = "form-control" })
+        <br />
+        @Html.Label("Skill 1")
+        @Html.TextBoxFor(x => x.Skill1, new { @class = "form-control" })
+        <br />
+        @Html.Label("Skill 2")
+        @Html.TextBoxFor(x => x.Skill2, new { @class = "form-control" })
+        <br />
+        @Html.Label("Skill 3")
+        @Html.TextBoxFor(x => x.Skill3, new { @class = "form-control" })
+        <br />
+        @Html.Label("Skill 4")
+        @Html.TextBoxFor(x => x.Skill4, new { @class = "form-control" })
+        <br />
+        @Html.Label("Rate 1")
+        @Html.TextBoxFor(x => x.Rate1, new { @class = "form-control" })
+        <br />
+        @Html.Label("Rate 2")
+        @Html.TextBoxFor(x => x.Rate2, new { @class = "form-control" })
+        <br />
+        @Html.Label("Rate 3")
+        @Html.TextBoxFor(x => x.Rate3, new { @class = "form-control" })
+        <br />
+        @Html.Label("Rate 4")
+        @Html.TextBoxFor(x => x.Rate4, new { @class = "form-control" })
+        <br />
+        <button class="btn btn-info">Update Skills</button>
+    </div>
+}

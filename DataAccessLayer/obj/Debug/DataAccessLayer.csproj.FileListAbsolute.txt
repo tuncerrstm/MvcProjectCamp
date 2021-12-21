@@ -25,3 +25,5 @@ D:\Code\mvcCamp\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrati
 D:\Code\mvcCamp\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_contactadd_date.resources
 D:\Code\mvcCamp\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_add_image_Files.resources
 D:\Code\mvcCamp\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_admin_table.resources
+D:\Code\mvcCamp\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.lesson95.resources
+D:\Code\mvcCamp\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.MyAbout.resources

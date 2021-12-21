@@ -56,6 +56,7 @@
     <Compile Include="Abstract\IContentDal.cs" />
     <Compile Include="Abstract\IImageFilesDal.cs" />
     <Compile Include="Abstract\IMessageDal.cs" />
+    <Compile Include="Abstract\IMyAboutDal.cs" />
     <Compile Include="Abstract\IRepository.cs" />
     <Compile Include="Abstract\ITitleDal.cs" />
     <Compile Include="Abstract\IWriterDal.cs" />
@@ -68,6 +69,7 @@
     <Compile Include="EntityFramework\EfContentDal.cs" />
     <Compile Include="EntityFramework\EfImageFilesDal.cs" />
     <Compile Include="EntityFramework\EfMessageDal.cs" />
+    <Compile Include="EntityFramework\EfMyAboutDal.cs" />
     <Compile Include="EntityFramework\EfTitleDal.cs" />
     <Compile Include="EntityFramework\EfWriterDal.cs" />
     <Compile Include="Migrations\202105250023369_mig1.cs" />
@@ -113,6 +115,14 @@
     <Compile Include="Migrations\202111231354467_mig_admin_table.cs" />
     <Compile Include="Migrations\202111231354467_mig_admin_table.designer.cs">
       <DependentUpon>202111231354467_mig_admin_table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112202357507_lesson95.cs" />
+    <Compile Include="Migrations\202112202357507_lesson95.designer.cs">
+      <DependentUpon>202112202357507_lesson95.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112210020502_MyAbout.cs" />
+    <Compile Include="Migrations\202112210020502_MyAbout.designer.cs">
+      <DependentUpon>202112210020502_MyAbout.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -161,6 +171,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202111231354467_mig_admin_table.resx">
       <DependentUpon>202111231354467_mig_admin_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112202357507_lesson95.resx">
+      <DependentUpon>202112202357507_lesson95.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112210020502_MyAbout.resx">
+      <DependentUpon>202112210020502_MyAbout.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
