@@ -29,6 +29,10 @@ namespace MvcProjectCamp.Controllers
 
             var trueData = context.Categories.Count(x => x.CategoryStatus == true);
 
+            var value4 = context.Categories.Where(u => u.CategoryID == context.Titles.GroupBy(x => x.CategoryID).OrderByDescending(x => x.Count())
+                .Select(x => x.Key).FirstOrDefault()).Select(x => x.CategoryName).FirstOrDefault();
+            ViewBag.value4 = value4;
+
             var falseData = context.Categories.Count(x => x.CategoryStatus == false);
             ViewBag.status = (trueData - falseData);
 
