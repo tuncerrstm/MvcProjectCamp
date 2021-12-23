@@ -40,12 +40,22 @@ namespace BusinessLayer.Concrete
 
         public void MessageDelete(Message message)
         {
-            throw new NotImplementedException();
+            _messageDal.Delete(message);
         }
 
         public void MessageUpdate(Message message)
         {
-            throw new NotImplementedException();
+            _messageDal.Update(message);
+        }
+
+        public int GetCountUnreadMessage(string p)
+        {
+            return _messageDal.List(x => !x.IsRead && x.ReceiverMail == p).Count;
+        }
+
+        public int GetCountUnreadSenderMessage(string p)
+        {
+            return _messageDal.List(x => !x.IsRead && x.SenderMail == p).Count;
         }
     }
 }

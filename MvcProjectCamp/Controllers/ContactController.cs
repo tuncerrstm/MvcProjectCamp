@@ -12,6 +12,7 @@ namespace MvcProjectCamp.Controllers
     public class ContactController : Controller
     {
         ContactManager cm = new ContactManager(new EfContactDal());
+        MessageManager mm = new MessageManager(new EfMessageDal());
         ContactValidator cv = new ContactValidator();
         
         
@@ -29,6 +30,10 @@ namespace MvcProjectCamp.Controllers
 
         public PartialViewResult MessageListMenu()
         {
+            ViewBag.ContactCount = cm.GetList().Count;
+            string adminUserName = (string)Session["AdminUserName"];
+            ViewBag.InMessageCount = mm.GetCountUnreadMessage(adminUserName);
+            ViewBag.SendMessageCount = mm.GetCountUnreadSenderMessage(adminUserName);
             return PartialView();
         }
     }

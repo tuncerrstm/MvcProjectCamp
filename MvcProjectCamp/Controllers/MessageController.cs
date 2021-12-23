@@ -11,6 +11,7 @@ using System.Web.Mvc;
 
 namespace MvcProjectCamp.Controllers
 {
+    
     public class MessageController : Controller
     {
         // GET: Message
@@ -19,9 +20,11 @@ namespace MvcProjectCamp.Controllers
         MessageValidator messageValidator = new MessageValidator();
 
         [Authorize]
-        public ActionResult Inbox(string p)
+        public ActionResult Inbox()
         {
-            var messageList = mm.GetListInbox(p);
+            string adminUserName = (string)Session["AdminUserName"];
+            var messageList = mm.GetListInbox(adminUserName);
+            ViewBag.unRead = mm.GetCountUnreadMessage(adminUserName);
             return View(messageList);
         }
 
@@ -34,7 +37,13 @@ namespace MvcProjectCamp.Controllers
         public ActionResult GetInboxMessageDetails(int id)
         {
             var values = mm.GetByID(id);
+            if (!values.IsRead)
+            {
+                values.IsRead = true;
+                mm.MessageUpdate(values);
+            }
             return View(values);
+
         }
 
         public ActionResult GetSendboxMessageDetails(int id)
@@ -69,6 +78,23 @@ namespace MvcProjectCamp.Controllers
             }
 
             return View();
+        }
+
+        public ActionResult IsRead(int id) //Bu alan gelen mesajlarindaki okundu butonundan gelen degeri DB yazar
+        {
+            var messageValue = mm.GetByID(id);
+
+            if (messageValue.IsRead)
+            {
+                messageValue.IsRead = false;
+            }
+            else
+            {
+                messageValue.IsRead = true;
+            }
+
+            mm.MessageUpdate(messageValue);
+            return RedirectToAction("Inbox");
         }
     }
 }

@@ -215,6 +215,7 @@
     <Content Include="AdminLTE-3.0.4\dist\img\avatar5.png" />
     <Content Include="AdminLTE-3.0.4\dist\img\boxed-bg.jpg" />
     <Content Include="AdminLTE-3.0.4\dist\img\boxed-bg.png" />
+    <Content Include="AdminLTE-3.0.4\dist\img\admin.jpg" />
     <Content Include="AdminLTE-3.0.4\dist\img\credit\american-express.png" />
     <Content Include="AdminLTE-3.0.4\dist\img\credit\cirrus.png" />
     <Content Include="AdminLTE-3.0.4\dist\img\credit\mastercard.png" />
@@ -2714,6 +2715,7 @@
     <Content Include="Views\MyAbout\Index.cshtml" />
     <Content Include="Views\MyAbout\Add.cshtml" />
     <Content Include="Views\MyAbout\Update.cshtml" />
+    <Content Include="Views\Content\GetAllContentByWriter.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -83,7 +83,15 @@
                                             <td class="mailbox-star"><a href="/WriterPanelMessage/GetInboxMessageDetails/@item.MessageID"><i class="fas fa-star text-warning"></i></a></td>
                                             <td class="mailbox-name"><a href="/WriterPanelMessage/GetInboxMessageDetails/@item.MessageID">@item.SenderMail</a></td>
                                             <td class="mailbox-subject">
-                                                <b>@item.Subject</b> - @item.MessageContent.Substring(0, 30)...
+                                                <b>@item.Subject</b> - @if (item.MessageContent.Length > 30)
+                                                {
+                                                    @item.MessageContent.Substring(0, 30)
+                                                }
+                                                else
+                                                {
+                                                    @item.MessageContent
+                                                }
+                                                ...
                                             </td>
                                             <td class="mailbox-attachment"></td>
                                             <td class="mailbox-date">@(((DateTime)item.MessageDate).ToString("dd-MMM-yyyy"))</td>

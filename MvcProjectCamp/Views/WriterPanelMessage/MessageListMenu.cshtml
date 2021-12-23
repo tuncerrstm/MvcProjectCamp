@@ -14,12 +14,13 @@
                 <li class="nav-item active">
                     <a href="~/WriterPanelMessage/Inbox/" class="nav-link">
                         <i class="fas fa-inbox"></i> Inbox
-                        <span class="badge bg-primary float-right">12</span>
+                        <span class="badge bg-primary float-right">@ViewBag.InMessageCount</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="/WriterPanelMessage/Sendbox/" class="nav-link">
                         <i class="far fa-envelope"></i> Sent
+                        <span class="badge bg-primary float-right">@ViewBag.SendMessageCount</span>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -30,7 +31,7 @@
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="fas fa-filter"></i> Junk
-                        <span class="badge bg-warning float-right">65</span>
+                        <span class="badge bg-warning float-right">5</span>
                     </a>
                 </li>
                 <li class="nav-item">

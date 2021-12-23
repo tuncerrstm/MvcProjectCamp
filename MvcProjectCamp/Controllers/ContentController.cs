@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PagedList;
+using PagedList.Mvc;
 
 namespace MvcProjectCamp.Controllers
 {
@@ -15,6 +17,7 @@ namespace MvcProjectCamp.Controllers
 
 
         ContentManager cm = new ContentManager(new EfContentDal());
+        //WriterManager wm = new WriterManager(new EfWriterDal());
 
         public ActionResult Index()
         {
@@ -37,11 +40,27 @@ namespace MvcProjectCamp.Controllers
             }
         }
 
-
+ 
         public ActionResult ContentByTitle(int id)
         {
             var contentValues = cm.GetListByTitleID(id);
             return View(contentValues);
         }
+
+        //public ActionResult GetAllContentByWriter(string p)
+        //{
+        //    string writerMail = Session["WriterMail"].ToString();
+        //    int writerID = wm.GetByMail(writerMail).WriterID;
+        //    if (p == null)
+        //    {
+        //        var values = cm.GetListByWriter(writerID);
+        //        return View(values);
+        //    }
+        //    else
+        //    {
+        //        var values = cm.GetListByWriter(writerID, p);
+        //        return View(values);
+        //    }
+        //}
     }
 }

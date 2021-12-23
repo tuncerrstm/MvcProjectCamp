@@ -14,6 +14,7 @@ namespace MvcProjectCamp.Controllers
 {
     public class WriterPanelMessageController : Controller
     {
+        ContactManager cm = new ContactManager(new EfContactDal());
         MessageManager mm = new MessageManager(new EfMessageDal());
         MessageValidator messageValidator = new MessageValidator();
 
@@ -21,6 +22,7 @@ namespace MvcProjectCamp.Controllers
         {
             string p = (string)Session["WriterMail"];
             var messageList = mm.GetListInbox(p);
+
             return View(messageList);
         }
 
@@ -33,6 +35,10 @@ namespace MvcProjectCamp.Controllers
 
         public PartialViewResult MessageListMenu()
         {
+            ViewBag.ContactCount = cm.GetList().Count;
+            string p = (string)Session["WriterMail"];
+            ViewBag.InMessageCount = mm.GetCountUnreadMessage(p);
+            ViewBag.SendMessageCount = mm.GetCountUnreadSenderMessage(p);
             return PartialView();
         }
 

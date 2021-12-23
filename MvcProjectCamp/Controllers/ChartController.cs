@@ -1,5 +1,4 @@
-﻿using DataAccessLayer.EntityFramework;
-using MvcProjectCamp.Models;
+﻿using MvcProjectCamp.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +9,7 @@ namespace MvcProjectCamp.Controllers
 {
     public class ChartController : Controller
     {
-        //private Context _context = new Context();
+
         // GET: Chart
         public ActionResult Index()
         {
@@ -48,37 +47,6 @@ namespace MvcProjectCamp.Controllers
             return ct;
         }
 
-        //public ActionResult CategoryPieChart()
-        //{
-        //    return View();
-        //}
-        //public ActionResult CategoryColumnChart()
-        //{
-        //    return View();
-        //}
-        //public ActionResult CategoryLineChart()
-        //{
-        //    return View();
-        //}
-
-        //public List<CategoryClass> CategoryListChart()
-        //{
-        //    List<CategoryClass> ct = new List<CategoryClass>();
-        //    using (var _context = new Context())
-        //    {
-        //        ct = _context.Categories.Select(x => new CategoryClass
-        //        {
-        //            CategoryName = x.CategoryName,
-        //            CategoryCount = x.CategoryName.Length
-        //        }).ToList();
-        //    }
-
-        //    return ct;
-        //}
-
-        //public ActionResult VisualizeByCategory()
-        //{
-        //    return Json(CategoryListChart(), JsonRequestBehavior.AllowGet);
-        //}
+   
     }
 }

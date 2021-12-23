@@ -6,6 +6,7 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
+@{ string read = ""; }
 <!DOCTYPE html>
 <html>
 
@@ -72,6 +73,7 @@
                                 <tbody>
                                     @foreach (var item in Model)
                                     {
+                                        read = (!item.IsRead) ? "warning" : "capitalize";
                                         <tr>
                                             <td>
                                                 <div class="icheck-primary">
@@ -82,7 +84,15 @@
                                             <td class="mailbox-star"><a href="/Message/GetInboxMessageDetails/@item.MessageID"><i class="fas fa-star text-warning"></i></a></td>
                                             <td class="mailbox-name"><a href="/Message/GetInboxMessageDetails/@item.MessageID">@item.SenderMail</a></td>
                                             <td class="mailbox-subject">
-                                                <b>@item.Subject</b> - @item.MessageContent.Substring(0, 30)...
+                                                <b>@item.Subject</b> - @if (item.MessageContent.Length > 30)
+                                                {
+                                                    @item.MessageContent.Substring(0, 30)
+                                                }
+                                                else
+                                                {
+                                                    @item.MessageContent
+                                                }
+                                                ...
                                             </td>
                                             <td class="mailbox-attachment"></td>
                                             <td class="mailbox-date">@(((DateTime)item.MessageDate).ToString("dd-MMM-yyyy"))</td>
@@ -95,6 +105,7 @@
                         <!-- /.mail-box-messages -->
                     </div>
                     <!-- /.card-body -->
+                    <p class="text-center">Unread Messages : <b> @ViewBag.unRead</b></p>
                     <div class="card-footer p-0">
                         <div class="mailbox-controls">
                             <!-- Check all button -->

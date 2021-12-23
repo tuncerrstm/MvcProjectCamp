@@ -14,18 +14,19 @@
                 <li class="nav-item active">
                     <a href="~/Contact/Index/" class="nav-link">
                         <i class="fas fa-mail-bulk"></i> Contact
-                        <span class="badge bg-primary float-right">0</span>
+                        <span class="badge bg-primary float-right">@ViewBag.ContactCount</span>
                     </a>
                 </li>
                 <li class="nav-item active">
                     <a href="~/Message/Inbox/" class="nav-link">
                         <i class="fas fa-inbox"></i> Inbox
-                        <span class="badge bg-primary float-right">12</span>
+                        <span class="badge bg-primary float-right">@ViewBag.InMessageCount</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="/Message/Sendbox/" class="nav-link">
                         <i class="far fa-envelope"></i> Sent
+                        <span class="badge bg-primary float-right">@ViewBag.SendMessageCount</span>
                     </a>
                 </li>
                 <li class="nav-item">
