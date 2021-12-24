@@ -11,14 +11,15 @@ using PagedList.Mvc;
 
 namespace MvcProjectCamp.Controllers
 {
+    
     public class ContentController : Controller
     {
         // GET: Content
 
-
+        
         ContentManager cm = new ContentManager(new EfContentDal());
         //WriterManager wm = new WriterManager(new EfWriterDal());
-
+        
         public ActionResult Index()
         {
             return View();
@@ -40,7 +41,7 @@ namespace MvcProjectCamp.Controllers
             }
         }
 
- 
+      
         public ActionResult ContentByTitle(int id)
         {
             var contentValues = cm.GetListByTitleID(id);

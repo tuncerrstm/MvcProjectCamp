@@ -140,6 +140,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AdminCategoryController.cs" />
+    <Compile Include="Controllers\AuthorizationController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ChartController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
@@ -2716,6 +2717,11 @@
     <Content Include="Views\MyAbout\Add.cshtml" />
     <Content Include="Views\MyAbout\Update.cshtml" />
     <Content Include="Views\Content\GetAllContentByWriter.cshtml" />
+    <Content Include="Views\Title\TitleReport.cshtml" />
+    <Content Include="Views\Test\SweetAlert.cshtml" />
+    <Content Include="Views\Authorization\Index.cshtml" />
+    <Content Include="Views\Authorization\AddAdmin.cshtml" />
+    <Content Include="Views\Authorization\EditAdmin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

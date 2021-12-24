@@ -23,6 +23,12 @@ namespace MvcProjectCamp.Controllers
             return View(titleValues);
         }
 
+        public ActionResult TitleReport()
+        {
+            var titleValues = tm.GetList();
+            return View(titleValues);
+        }
+
         [HttpGet]
         public ActionResult AddTitle()
         {
