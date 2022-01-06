@@ -5,6 +5,7 @@
 - Layered Architecture
 - Entity Framework
 - MVC Pattern
+- Code First
 
 Our project was created using the code first methodology.
 
