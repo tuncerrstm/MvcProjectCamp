@@ -8,6 +8,7 @@
 - Code First
 
 Our project was created using the code first methodology.
+Completed..
 
 <img src="https://media.giphy.com/media/3oz8xTNxIYYo7sblK0/giphy.gif" align ="right" >
 
